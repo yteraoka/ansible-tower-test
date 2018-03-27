@@ -2,3 +2,13 @@
 - name: test
   debug:
     var: encrypted
+
+- name: copy encrypted text
+  copy:
+    dest: /tmp/test.txt
+    content: "{{ encrypted }}"
+
+- name: remove copyed file
+  file:
+    state: absent
+    path: /tmp/test.txt
