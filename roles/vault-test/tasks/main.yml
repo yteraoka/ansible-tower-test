@@ -3,6 +3,11 @@
   debug:
     var: encrypted
 
+- name: copy test text
+  copy:
+    dest: /tmp/test.txt
+    content: "test test"
+
 - name: copy encrypted text
   copy:
     dest: /tmp/test.txt
