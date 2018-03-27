@@ -1,0 +1,5 @@
+- hosts: web
+  var_files:
+    - vars/encrypted
+  roles:
+    - vault-test
