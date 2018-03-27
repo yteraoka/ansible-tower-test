@@ -25,3 +25,8 @@
   file:
     state: absent
     path: /tmp/test.txt
+
+- name: copy template
+  template:
+    src: test.j2
+    dest: /tmp/test.txt
