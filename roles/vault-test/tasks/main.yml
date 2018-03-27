@@ -13,6 +13,14 @@
     dest: /tmp/test.txt
     content: "{{ encrypted }}"
 
+- name: cat text
+  command: cat /tmp/test.txt
+  register: cat
+
+- name: show cat text
+  debug:
+    var: cat.stdout
+
 - name: remove copyed file
   file:
     state: absent
